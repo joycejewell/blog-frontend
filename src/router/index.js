@@ -4,8 +4,8 @@ import AboutView from "../views/AboutView.vue";
 import TestView from "../views/TestView.vue";
 import SignUpView from "../views/SignUpView.vue";
 import LogInView from "../views/LogInView.vue";
-import LogOutView from "../view/LogOutView.vue";
-
+import LogOutView from "../views/LogOutView.vue";
+import PostsIndex from "../views/PostsIndex.vue";
 const routes = [
   {
     path: "/",
@@ -36,6 +36,11 @@ const routes = [
     path: "/logout",
     name: "logout",
     component: LogOutView,
+  },
+  {
+    path: "/posts",
+    name: "posts",
+    component: PostsIndex,
   },
 ];
 
