@@ -25,9 +25,8 @@ export default {
     <h1>All Posts</h1>
     <div v-for="post in posts" v-bind:key="post.id">
       <h2>Title: {{ post.title }}</h2>
-      <img v-bind:src="post.image_url" v-bind:alt="post.title" />
-      <p>Chef: {{ post.chef }}</p>
-      <button>More info</button>
+      <img v-bind:src="post.image" v-bind:alt="post.title" />
+      <p>Description: {{ post.body }}</p>
     </div>
   </div>
 </template>
