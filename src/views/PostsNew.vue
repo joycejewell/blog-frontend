@@ -10,16 +10,16 @@ export default {
   methods: {
     createPost: function () {
       axios
-      .post("/post.json" this.newPostParams)
-      .then((response) => {
-        this.posts = response.data;
-        console.log("Great Success!", response.data);
-        this.$router.push("/posts")
-      });
-      .catch((error) => {
-        console.log(error.response.data.errors);
-        this.errors = error.response.data.errors;
-      });
+        .post("/post.json", this.newPostParams)
+        .then((response) => {
+          this.posts = response.data;
+          console.log("Great Success!", response.data);
+          this.$router.push("/posts");
+        })
+        .catch((error) => {
+          console.log(error.response.data.errors);
+          this.errors = error.response.data.errors;
+        });
     },
   },
 };
