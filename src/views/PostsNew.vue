@@ -3,14 +3,14 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      newPostParams: {},
+      post: {},
       errors: [],
     };
   },
   methods: {
     createPost: function () {
       axios
-        .post("/post.json", this.newPostParams)
+        .post("/posts.json", this.post)
         .then((response) => {
           this.posts = response.data;
           console.log("Great Success!", response.data);
@@ -42,9 +42,7 @@ export default {
         Description:
         <input type="text" v-model="post.description" />
       </div>
-      <div>
-        <input type="submit" value="Submit Post" />
-      </div>
+      <input type="submit" value="Submit Post" />
     </form>
   </div>
 </template>

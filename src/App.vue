@@ -6,15 +6,15 @@
     |
     <router-link to="/test">Sample</router-link>
     |
-    <router-link to="/signup">SignUp</router-link>
+    <router-link to="/signup">Sign Up</router-link>
     |
-    <router-link to="/login">LogIn</router-link>
+    <router-link to="/login">Log In</router-link>
     |
-    <router-link to="/logout">LogOut</router-link>
+    <router-link to="/logout">Log Out</router-link>
     |
-    <router-link to="/posts">PostsIndex</router-link>
+    <router-link to="/posts">Index</router-link>
     |
-    <router-link to="/posts/new">PostsNew</router-link>
+    <router-link to="/post/new">New</router-link>
   </nav>
   <router-view />
 </template>
