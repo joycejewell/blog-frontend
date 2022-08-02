@@ -14,7 +14,7 @@
     |
     <router-link to="/posts">PostsIndex</router-link>
     |
-    <router-link to="/postsnew">PostsNew</router-link>
+    <router-link to="/posts/new">PostsNew</router-link>
   </nav>
   <router-view />
 </template>

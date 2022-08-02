@@ -8,9 +8,9 @@ export default {
     };
   },
   methods: {
-    createPost: function () {
+    editPost: function () {
       axios
-        .post("/post.json", this.newPostParams)
+        .patch("/post.json", this.newPostParams)
         .then((response) => {
           this.posts = response.data;
           console.log("Great Success!", response.data);
@@ -27,7 +27,7 @@ export default {
 
 <template>
   <div>
-    <h1>New Post</h1>
+    <h1>Edit Post</h1>
     <div v-for:="post in posts" v-bind:key="post.id">
       <h2>Title: {{ post.title }}</h2>
       <img v-bind:src="post.image" v-bind:alt="post.title" />
