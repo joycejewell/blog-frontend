@@ -28,10 +28,23 @@ export default {
 <template>
   <div>
     <h1>New Post</h1>
-    <div v-for:="post in posts" v-bind:key="post.id">
-      <h2>Title: {{ post.title }}</h2>
-      <img v-bind:src="post.image" v-bind:alt="post.title" />
-      <p>Description: {{ post.body }}</p>
-    </div>
+    <form v-on:submit.prevent="createPost()">
+      <ul>
+        <li v-for="error in errors" v-bind:key="error">
+          {{ error }}
+        </li>
+      </ul>
+      <div>
+        Title:
+        <input type="text" v-model="post.title" />
+      </div>
+      <div>
+        Description:
+        <input type="text" v-model="post.description" />
+      </div>
+      <div>
+        <input type="submit" value="Submit Post" />
+      </div>
+    </form>
   </div>
 </template>
